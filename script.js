@@ -1,10 +1,19 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
-menuToggle.addEventListener('click', () => {
+menuToggle?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', isOpen);
   menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && nav?.classList.contains('open')) {
+    nav.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Open navigation');
+    menuToggle?.focus();
+  }
 });
 
 document.querySelectorAll('.main-nav a').forEach((link) => {
