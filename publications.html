@@ -15,587 +15,445 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/site-icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 
+  <!-- Styles for images in Latest Publications cards -->
+  <style>
+    .video-art.publication-image {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .video-art.publication-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.35s ease;
+    }
+
+    .video-card:hover .publication-image img {
+      transform: scale(1.04);
+    }
+
+    .video-art.publication-image .episode-label {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(5, 15, 25, 0.88);
+      color: #ffffff;
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .video-art.publication-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.12),
+          transparent 45%,
+          rgba(0, 0, 0, 0.18)
+        );
+    }
+
+    @media (max-width: 700px) {
+      .video-art.publication-image,
+      .video-art.publication-image img {
+        min-height: 220px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<header class="site-header">
-
+  <header class="site-header">
     <a class="brand" href="index.html" aria-label="Byte by Byte home">
-        <img src="assets/byte-by-byte-logo.png" alt="Byte by Byte">
+      <img src="assets/byte-by-byte-logo.png" alt="Byte by Byte" />
     </a>
 
-    <button class="menu-toggle"
-            aria-label="Open navigation"
-            aria-expanded="false">
-        <span></span>
-        <span></span>
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
     </button>
 
-    <nav class="main-nav">
-
-        <a href="index.html">Home</a>
-
-        <a href="podcast.html">Podcast</a>
-
-        <a href="publications.html" class="active">
-            Publications
-        </a>
-
-        <a href="about.html">About Me</a>
-
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="about.html">About Me</a>
     </nav>
-
-</header>
-
-<main>
-
-<!-- ========================================= -->
-
-<section class="hero section-shell">
-
-<div class="hero-copy">
-
-<p class="eyebrow">
-<span></span>
-THOUGHT LEADERSHIP
-</p>
-
-<h1>
-
-Technology <em>Insights</em><br>
-
-from Industry Leaders
-
-</h1>
-
-<p class="hero-description">
-
-The Byte by Byte Publications transform every podcast
-conversation into an editorial-style article that explores
-Artificial Intelligence, Data Management, Software Engineering,
-Cybersecurity, Leadership, and the future of technology.
-
-Each publication highlights practical lessons from executives,
-researchers, entrepreneurs, and innovators shaping tomorrow's
-technology landscape.
-
-</p>
-
-<div class="hero-actions">
-
-<a href="#featured" class="button green">
-
-Read Featured Publication
-
-<b>→</b>
-
-</a>
-
-<a href="podcast.html" class="button blue">
-
-Watch Podcast Episodes
-
-<b>→</b>
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-visual">
-
-<img
-src="assets/byte-by-byte-logo.png"
-alt="The Byte by Byte Publications">
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-
-<section
-id="featured"
-class="featured section-shell">
-
-<div class="section-heading">
-
-<h2>
-
-Featured <em>Publication</em>
-
-</h2>
-
-</div>
-
-<div class="feature-card">
-
-<div class="feature-art">
-
-<img
-src="assets/peteraiken.png"
-alt="Peter Aiken">
-
-</div>
-
-<div class="feature-content">
-
-<p class="tag cyan">
-
-FEATURED ARTICLE • 7 MIN READ
-
-</p>
-
-<h3>
-
-Why Most Companies Fail at AI:
-The Data Problem Nobody Talks About
-
-</h3>
-
-<p>
-
-Artificial Intelligence is transforming every industry,
-yet many organizations still struggle to generate value.
-
-In my conversation with internationally recognized
-data management expert Dr. Peter Aiken,
-we discuss why data quality—not larger AI models—
-is the real foundation of successful AI.
-
-Discover why trustworthy data,
-critical thinking,
-and continuous learning remain essential
-for every future technology leader.
-
-</p>
-
-<br>
-
-<a
-class="button green"
-href="peter-aiken.html">
-
-Read Publication
-
-<b>→</b>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================================= -->
-
-<section class="articles section-shell">
-
-    <div class="section-heading">
-
-        <h2>
-
-            Latest <em>Publications</em>
-
-        </h2>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span></span>
+          THOUGHT LEADERSHIP
+        </p>
+
+        <h1>
+          Technology <em>Insights</em><br />
+          from Industry Leaders
+        </h1>
+
+        <p class="hero-description">
+          The Byte by Byte Publications transform every podcast conversation
+          into an editorial-style article that explores Artificial
+          Intelligence, Data Management, Software Engineering, Cybersecurity,
+          Leadership, and the future of technology.
+
+          Each publication highlights practical lessons from executives,
+          researchers, entrepreneurs, and innovators shaping tomorrow's
+          technology landscape.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#featured" class="button green">
+            Read Featured Publications
+            <b>→</b>
+          </a>
+
+          <a href="podcast.html" class="button blue">
+            Watch Podcast Episodes
+            <b>→</b>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="assets/byte-by-byte-logo.png"
+          alt="The Byte by Byte Publications"
+        />
+      </div>
+    </section>
+
+    <!-- Featured publications -->
+    <section id="featured" class="featured section-shell">
+      <div class="section-heading">
+        <h2>Featured <em>Publications</em></h2>
+      </div>
+
+      <!-- Peter Aiken -->
+      <div class="feature-card">
+        <div class="feature-art">
+          <img src="assets/peteraiken.png" alt="Dr. Peter Aiken" />
+        </div>
+
+        <div class="feature-content">
+          <p class="tag cyan">
+            EPISODE 01 • FEATURED ARTICLE • 7 MIN READ
+          </p>
+
+          <h3>
+            Why Most Companies Fail at AI:
+            The Data Problem Nobody Talks About
+          </h3>
+
+          <p>
+            Artificial Intelligence is transforming every industry, yet many
+            organizations still struggle to generate value.
+
+            In my conversation with internationally recognized data management
+            expert Dr. Peter Aiken, we discuss why data quality—not larger AI
+            models—is the real foundation of successful AI.
+
+            Discover why trustworthy data, critical thinking, and continuous
+            learning remain essential for every future technology leader.
+          </p>
+
+          <br />
+
+          <a class="button green" href="peter-aiken.html">
+            Read Peter's Publication
+            <b>→</b>
+          </a>
+        </div>
+      </div>
+
+      <!-- Romain Lheritier -->
+      <div class="feature-card">
+        <div class="feature-art">
+          <img src="assets/romain.png" alt="Romain Lheritier" />
+        </div>
+
+        <div class="feature-content">
+          <p class="tag cyan">
+            EPISODE 02 • FEATURED ARTICLE • 6 MIN READ
+          </p>
+
+          <h3>
+            Beyond Code:
+            Why Curiosity Wins
+          </h3>
+
+          <p>
+            Technology changes rapidly, but the skills that create lasting
+            success extend far beyond writing code.
+
+            In my conversation with technology leader Romain Lheritier, we
+            explore Artificial Intelligence, leadership, communication, and
+            the importance of remaining curious throughout your career.
+
+            Discover why lifelong learning, adaptability, and strong
+            communication skills can become an engineer's greatest
+            competitive advantages.
+          </p>
+
+          <br />
+
+          <a class="button blue" href="Romain-Lheritier.html">
+            Read Romain's Publication
+            <b>→</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest publications -->
+    <section class="articles section-shell">
+      <div class="section-heading">
+        <h2>Latest <em>Publications</em></h2>
 
         <a href="podcast.html" class="text-link">
-
-            View All Podcast Episodes →
-
+          View All Podcast Episodes →
         </a>
+      </div>
 
-    </div>
-
-    <div class="podcast-grid">
-
-        <!-- ===================== -->
-
+      <div class="podcast-grid">
+        <!-- Episode 1 -->
         <article class="video-card">
-
-            <div class="video-art green-art">
-
-                <span>EPISODE 01</span>
-
-                <b>AI</b>
-
-            </div>
-
-            <div class="video-copy">
-
-                <p class="tag">
-                    7 MIN READ
-                </p>
-
-                <h3>
-
-                    Why Most Companies Fail at AI
-
-                </h3>
-
-                <p>
-
-                    Peter Aiken explains why clean,
-                    trustworthy data—not larger AI
-                    models—is the real key to successful
-                    enterprise AI.
-
-                </p>
-
-                <a
-                    class="read-link"
-                    href="peter-aiken.html">
-
-                    Read Article →
-
-                </a>
-
-            </div>
-
-        </article>
-
-        <!-- ===================== -->
-
-        <article class="video-card">
-
-            <div class="video-art blue-art">
-
-                <span>EPISODE 02</span>
-
-                <b>AI</b>
-
-            </div>
-
-            <div class="video-copy">
-
-                <p class="tag">
-
-                    6 MIN READ
-
-                </p>
-
-                <h3>
-
-                    Beyond Code:
-                    Why Curiosity Wins
-
-                </h3>
-
-                <p>
-
-                    Roman Laritier discusses AI,
-                    leadership,
-                    communication,
-                    and why lifelong learning
-                    remains every engineer's greatest
-                    competitive advantage.
-
-                </p>
-
-                <a
-                    class="read-link"
-                    href="Romain-Lheritier.html">
-
-                    Read Article →
-
-                </a>
-
-            </div>
-
-        </article>
-
-        <!-- ===================== -->
-
-        <article class="video-card coming-soon">
-
-            <div class="video-art green-art">
-
-                <span>COMING SOON</span>
-
-                <b>03</b>
-
-            </div>
-
-            <div class="video-copy">
-
-                <p class="coming-label">
-
-                    NEXT PUBLICATION
-
-                </p>
-
-                <h3>
-
-                    Future Industry Leader
-
-                </h3>
-
-                <p>
-
-                    The next edition of
-                    The Byte by Byte
-                    will feature another
-                    conversation with an
-                    industry leader exploring
-                    technology, innovation,
-                    and leadership.
-
-                </p>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-
-<section class="featured section-shell">
-
-<div class="section-heading">
-
-<h2>
-
-Why Read <em>The Byte by Byte</em>
-
-</h2>
-
-</div>
-
-<div class="feature-card">
-
-<div class="feature-content">
-
-<p class="tag cyan">
-
-OUR MISSION
-
-</p>
-
-<h3>
-
-Making Technology Accessible
-
-</h3>
-
-<p>
-
-The Byte by Byte is more than a podcast.
-
-It is a student-led technology publication
-dedicated to helping students,
-educators,
-and professionals better understand
-Artificial Intelligence,
-Computer Science,
-Cybersecurity,
-Software Engineering,
-and emerging technologies through
-meaningful conversations with
-industry experts.
-
-Every interview becomes a publication
-designed to preserve valuable insights,
-encourage curiosity,
-and inspire future innovators.
-
-</p>
-
-</div>
-
-<div class="feature-content">
-
-<p class="tag cyan">
-
-WHAT YOU'LL FIND
-
-</p>
-
-<h3>
-
-Every Publication Includes
-
-</h3>
-
-<p>
-
-✔ Executive insights from technology leaders
-
-<br><br>
-
-✔ Practical lessons students can apply today
-
-<br><br>
-
-✔ AI, data, engineering, and leadership topics
-
-<br><br>
-
-✔ Key takeaways and actionable advice
-
-<br><br>
-
-✔ Full podcast episode companion
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-
-<section class="section-shell">
-
-<div class="section-heading">
-
-<h2>
-
-More <em>Coming Soon</em>
-
-</h2>
-
-</div>
-
-<p class="hero-description">
-
-As The Byte by Byte continues to grow,
-new interviews with professors,
-technology executives,
-entrepreneurs,
-researchers,
-and innovators will be published here.
-
-Each conversation will be transformed
-into a professionally written article
-to help readers discover new ideas,
-career advice,
-and emerging technology trends.
-
-</p>
-
-</section>
-<!-- ========================================= -->
-
-<section class="section-shell">
-
-    <div class="feature-card">
-
-        <div class="feature-content">
-
-            <p class="tag cyan">
-
-                STAY CONNECTED
-
-            </p>
-
-            <h3>
-
-                Follow The Byte by Byte
-
-            </h3>
+          <div class="video-art publication-image">
+            <img
+              src="assets/peteraiken.png"
+              alt="Dr. Peter Aiken"
+            />
+            <span class="episode-label">EPISODE 01</span>
+          </div>
+
+          <div class="video-copy">
+            <p class="tag">7 MIN READ</p>
+
+            <h3>Why Most Companies Fail at AI</h3>
 
             <p>
-
-                New podcast episodes and publications are released
-                throughout the year featuring professors,
-                engineers,
-                founders,
-                researchers,
-                and technology executives.
-
-                Follow along as we explore the future of
-                Artificial Intelligence,
-                Computer Science,
-                Cybersecurity,
-                Data Science,
-                and Software Engineering.
-
+              Peter Aiken explains why clean, trustworthy data—not larger AI
+              models—is the real key to successful enterprise AI.
             </p>
 
-            <br>
-
-            <a href="podcast.html" class="button green">
-
-                Watch the Podcast
-
-                <b>→</b>
-
+            <a class="read-link" href="peter-aiken.html">
+              Read Article →
             </a>
+          </div>
+        </article>
 
+        <!-- Episode 2 -->
+        <article class="video-card">
+          <div class="video-art publication-image">
+            <img
+              src="assets/romain.png"
+              alt="Romain Lheritier"
+            />
+            <span class="episode-label">EPISODE 02</span>
+          </div>
+
+          <div class="video-copy">
+            <p class="tag">6 MIN READ</p>
+
+            <h3>Beyond Code: Why Curiosity Wins</h3>
+
+            <p>
+              Romain Lheritier discusses AI, leadership, communication, and why
+              lifelong learning remains every engineer's greatest competitive
+              advantage.
+            </p>
+
+            <a class="read-link" href="Romain-Lheritier.html">
+              Read Article →
+            </a>
+          </div>
+        </article>
+
+        <!-- Coming soon -->
+        <article class="video-card coming-soon">
+          <div class="video-art green-art">
+            <span>COMING SOON</span>
+            <b>03</b>
+          </div>
+
+          <div class="video-copy">
+            <p class="coming-label">NEXT PUBLICATION</p>
+
+            <h3>Future Industry Leader</h3>
+
+            <p>
+              The next edition of The Byte by Byte will feature another
+              conversation with an industry leader exploring technology,
+              innovation, and leadership.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why read -->
+    <section class="featured section-shell">
+      <div class="section-heading">
+        <h2>Why Read <em>The Byte by Byte</em></h2>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-content">
+          <p class="tag cyan">OUR MISSION</p>
+
+          <h3>Making Technology Accessible</h3>
+
+          <p>
+            The Byte by Byte is more than a podcast.
+
+            It is a student-led technology publication dedicated to helping
+            students, educators, and professionals better understand
+            Artificial Intelligence, Computer Science, Cybersecurity, Software
+            Engineering, and emerging technologies through meaningful
+            conversations with industry experts.
+
+            Every interview becomes a publication designed to preserve
+            valuable insights, encourage curiosity, and inspire future
+            innovators.
+          </p>
         </div>
 
         <div class="feature-content">
+          <p class="tag cyan">WHAT YOU'LL FIND</p>
 
-            <p class="tag cyan">
+          <h3>Every Publication Includes</h3>
 
-                ABOUT THE PUBLICATIONS
+          <p>
+            ✔ Executive insights from technology leaders
 
-            </p>
+            <br /><br />
 
-            <h3>
+            ✔ Practical lessons students can apply today
 
-                Turning Conversations Into Lasting Insights
+            <br /><br />
 
-            </h3>
+            ✔ AI, data, engineering, and leadership topics
 
-            <p>
+            <br /><br />
 
-                Every interview on <strong>The Byte by Byte</strong>
-                is transformed into an editorial publication.
+            ✔ Key takeaways and actionable advice
 
-                Instead of simply summarizing a conversation,
-                each article expands upon the ideas discussed,
-                highlights key lessons,
-                and provides readers with a resource they can
-                revisit long after the podcast ends.
+            <br /><br />
 
-                Our goal is simple:
+            ✔ Full podcast episode companion
+          </p>
+        </div>
+      </div>
+    </section>
 
-                <br><br>
+    <!-- More coming soon -->
+    <section class="section-shell">
+      <div class="section-heading">
+        <h2>More <em>Coming Soon</em></h2>
+      </div>
 
-                <strong>
-                Inspire the next generation of technology leaders.
-                </strong>
+      <p class="hero-description">
+        As The Byte by Byte continues to grow, new interviews with professors,
+        technology executives, entrepreneurs, researchers, and innovators will
+        be published here.
 
-            </p>
+        Each conversation will be transformed into a professionally written
+        article to help readers discover new ideas, career advice, and emerging
+        technology trends.
+      </p>
+    </section>
 
+    <!-- Stay connected -->
+    <section class="section-shell">
+      <div class="feature-card">
+        <div class="feature-content">
+          <p class="tag cyan">STAY CONNECTED</p>
+
+          <h3>Follow The Byte by Byte</h3>
+
+          <p>
+            New podcast episodes and publications are released throughout the
+            year featuring professors, engineers, founders, researchers, and
+            technology executives.
+
+            Follow along as we explore the future of Artificial Intelligence,
+            Computer Science, Cybersecurity, Data Science, and Software
+            Engineering.
+          </p>
+
+          <br />
+
+          <a href="podcast.html" class="button green">
+            Watch the Podcast
+            <b>→</b>
+          </a>
         </div>
 
-    </div>
+        <div class="feature-content">
+          <p class="tag cyan">ABOUT THE PUBLICATIONS</p>
 
-</section>
+          <h3>Turning Conversations Into Lasting Insights</h3>
 
-</main>
+          <p>
+            Every interview on <strong>The Byte by Byte</strong> is transformed
+            into an editorial publication.
 
-<footer>
+            Instead of simply summarizing a conversation, each article expands
+            upon the ideas discussed, highlights key lessons, and provides
+            readers with a resource they can revisit long after the podcast
+            ends.
 
-    <p>
+            Our goal is simple:
 
-        © 2026 The Byte by Byte.
-        All Rights Reserved.
+            <br /><br />
 
-    </p>
+            <strong>
+              Inspire the next generation of technology leaders.
+            </strong>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</footer>
+  <footer>
+    <p>© 2026 The Byte by Byte. All Rights Reserved.</p>
+  </footer>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
