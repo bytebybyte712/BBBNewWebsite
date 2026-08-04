@@ -81,7 +81,9 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .hero-visual > img { display: block; width: 100%; height: auto; object-fit: cover; }
 .guest-portrait { padding: 0; }
 .guest-portrait > img { aspect-ratio: 1; }
-.mission-section { display: grid; grid-template-columns: minmax(190px, .42fr) minmax(0, 1fr); gap: 54px; border-top: 1px solid var(--line); padding-block: 88px 100px; }
+.home-hero { min-height: 420px; padding-block: 32px 40px; }
+.home-hero .hero-visual video { max-height: 310px; }
+.mission-section { display: grid; grid-template-columns: minmax(190px, .42fr) minmax(0, 1fr); gap: 42px; border-top: 1px solid var(--line); padding-block: 44px 72px; }
 .mission-label > p:last-child { color: var(--muted); font: 11px var(--mono); }
 .mission-copy { max-width: 720px; }
 .mission-copy h2 { margin-bottom: 22px; font-size: clamp(34px, 5vw, 50px); line-height: 1.06; letter-spacing: -1.5px; text-wrap: balance; }
