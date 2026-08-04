@@ -54,9 +54,9 @@ cover_text = [Paragraph("PRESS &amp; MEDIA", small), Paragraph("Byte by Byte<br/
 cover = Table([[logo, cover_text]], colWidths=[2.05*inch, 5.0*inch], rowHeights=[3.0*inch])
 cover.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,-1),SURFACE),("BOX",(0,0),(-1,-1),1,LINE),("VALIGN",(0,0),(-1,-1),"MIDDLE"),("LEFTPADDING",(0,0),(-1,-1),20),("RIGHTPADDING",(0,0),(-1,-1),20)]))
 story += [Spacer(1, 0.55*inch), cover, Spacer(1, 30), Paragraph("PROJECT AT A GLANCE", small)]
-stats = Table([["3", "3", "6+"],["PUBLISHED EPISODES", "EXPERT GUESTS", "TECHNOLOGY THEMES"]], colWidths=[2.4*inch]*3)
+stats = Table([["3", "3", "198", "6"],["EPISODES", "EXPERT GUESTS", "YOUTUBE VIEWS*", "YOUTUBE LIKES*"]], colWidths=[1.8*inch]*4)
 stats.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,-1),SURFACE),("BOX",(0,0),(-1,-1),1,LINE),("INNERGRID",(0,0),(-1,-1),0.5,LINE),("TEXTCOLOR",(0,0),(-1,0),GREEN),("TEXTCOLOR",(0,1),(-1,1),MUTED),("FONTNAME",(0,0),(-1,0),"Helvetica-Bold"),("FONTSIZE",(0,0),(-1,0),25),("FONTNAME",(0,1),(-1,1),"Courier"),("FONTSIZE",(0,1),(-1,1),7),("ALIGN",(0,0),(-1,-1),"CENTER"),("VALIGN",(0,0),(-1,-1),"MIDDLE"),("TOPPADDING",(0,0),(-1,0),15),("BOTTOMPADDING",(0,0),(-1,0),7),("TOPPADDING",(0,1),(-1,1),7),("BOTTOMPADDING",(0,1),(-1,1),15)]))
-story += [stats, PageBreak()]
+story += [stats, Spacer(1, 8), Paragraph("* Public YouTube snapshot as of August 4, 2026.", small), PageBreak()]
 
 story += [Paragraph("APPROVED BIOGRAPHIES", small), Paragraph("About Vihaan Mathur", h1), Paragraph("SHORT BIO", h2), Paragraph("Vihaan Mathur is a rising junior at Deep Run High School's Center for Information Technology and the creator and host of Byte by Byte - Learning from Tech Minds. Through conversations with technology executives, professors, engineers, and entrepreneurs, he helps students understand careers and ideas across data, artificial intelligence, cybersecurity, engineering, and leadership. Vihaan previously served as Vice President and technology leader of his Technology Student Association chapter. He earned five first-place awards at Virginia State TSA competitions, became a finalist at the TSA National Conference in Dallas, and received special recognition from the TSA Advisory Board for outstanding achievement.", body), Paragraph("LONG BIO", h2)]
 long_bio = [
@@ -71,13 +71,13 @@ story.append(PageBreak())
 
 story += [Paragraph("PROJECT &amp; GUESTS", small), Paragraph("Learning from Tech Minds", h1), Paragraph("MISSION", h2), Paragraph("Empowering the next generation of innovators by connecting students with world-class technology leaders through thoughtful conversations about AI, engineering, entrepreneurship, and leadership.", body), Paragraph("FEATURED CONVERSATIONS", h2)]
 guest_data = [
-    [img("assets/peteraiken.png", 1.05*inch, 1.05*inch), Paragraph("<b>Dr. Peter Aiken</b><br/><font color='#00B0FF'>Professor, author, and enterprise data authority</font><br/>Key lesson: Strong AI begins with trustworthy, well-managed data.", body)],
-    [img("assets/romain.png", 1.05*inch, 1.05*inch), Paragraph("<b>Romain Lheritier</b><br/><font color='#00B0FF'>CEO and Co-Founder, Ippon Technologies</font><br/>Key lesson: Curiosity and continuous learning matter even more as AI accelerates change.", body)],
-    [img("assets/riad-hasan.jpeg", 1.05*inch, 1.05*inch), Paragraph("<b>Riad Hasan</b><br/><font color='#00B0FF'>Fractional CTO and insurance technology leader</font><br/>Key lesson: Begin with the problem and keep human judgment at the center.", body)],
+    [img("assets/peteraiken.png", 1.05*inch, 1.05*inch), Paragraph("<b>Dr. Peter Aiken</b><br/><font color='#00B0FF'>Professor, author, and enterprise data authority</font><br/>Key lesson: Strong AI begins with trustworthy, well-managed data.<br/><font color='#00E676'>126 views / 5 likes*</font>", body)],
+    [img("assets/romain.png", 1.05*inch, 1.05*inch), Paragraph("<b>Romain Lheritier</b><br/><font color='#00B0FF'>CEO and Co-Founder, Ippon Technologies</font><br/>Key lesson: Curiosity and continuous learning matter even more as AI accelerates change.<br/><font color='#00E676'>66 views / 1 like*</font>", body)],
+    [img("assets/riad-hasan.jpeg", 1.05*inch, 1.05*inch), Paragraph("<b>Riad Hasan</b><br/><font color='#00B0FF'>Fractional CTO and insurance technology leader</font><br/>Key lesson: Begin with the problem and keep human judgment at the center.<br/><font color='#00E676'>6 views / 0 likes*</font>", body)],
 ]
 guest_table = Table(guest_data, colWidths=[1.3*inch, 5.9*inch], rowHeights=[1.25*inch]*3)
 guest_table.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,-1),SURFACE),("BOX",(0,0),(-1,-1),1,LINE),("INNERGRID",(0,0),(-1,-1),0.5,LINE),("VALIGN",(0,0),(-1,-1),"MIDDLE"),("LEFTPADDING",(0,0),(-1,-1),10),("RIGHTPADDING",(0,0),(-1,-1),10)]))
-story += [guest_table, Spacer(1, 20), Paragraph("TOPICS COVERED", h2), Paragraph("Enterprise data management  /  Artificial intelligence  /  Software engineering  /  Cloud computing  /  Cybersecurity  /  Insurance technology  /  Entrepreneurship  /  Leadership", body), PageBreak()]
+story += [guest_table, Spacer(1, 8), Paragraph("* Public YouTube snapshot as of August 4, 2026.", small), Spacer(1, 10), Paragraph("TOPICS COVERED", h2), Paragraph("Enterprise data management  /  Artificial intelligence  /  Software engineering  /  Cloud computing  /  Cybersecurity  /  Insurance technology  /  Entrepreneurship  /  Leadership", body), PageBreak()]
 
 story += [Paragraph("MEDIA USE", small), Paragraph("Assets, Contact &amp; Attribution", h1)]
 asset_table = Table([[img("assets/IMG_0142.jpg", 1.45*inch, 1.95*inch), img("assets/Vihaan_Publication.jpg", 1.65*inch, 1.95*inch), img("assets/byte-by-byte-logo.png", 1.95*inch, 1.95*inch)]], colWidths=[2.35*inch,2.35*inch,2.35*inch])
