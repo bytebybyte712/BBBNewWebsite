@@ -81,6 +81,12 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .hero-visual > img { display: block; width: 100%; height: auto; object-fit: cover; }
 .guest-portrait { padding: 0; }
 .guest-portrait > img { aspect-ratio: 1; }
+.mission-section { display: grid; grid-template-columns: minmax(190px, .42fr) minmax(0, 1fr); gap: 54px; border-top: 1px solid var(--line); padding-block: 88px 100px; }
+.mission-label > p:last-child { color: var(--muted); font: 11px var(--mono); }
+.mission-copy { max-width: 720px; }
+.mission-copy h2 { margin-bottom: 22px; font-size: clamp(34px, 5vw, 50px); line-height: 1.06; letter-spacing: -1.5px; text-wrap: balance; }
+.mission-copy h2 em { color: var(--green); font-style: normal; }
+.mission-copy > p { margin-bottom: 27px; color: var(--text); font-size: clamp(20px, 2.7vw, 27px); line-height: 1.42; letter-spacing: -.35px; text-wrap: balance; }
 
 .featured, .articles { min-height: calc(100svh - 152px); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 28px; }
@@ -199,6 +205,8 @@ footer p { margin: 0; color: var(--muted); font: 11px var(--mono); }
   h1 { font-size: clamp(38px, 12vw, 50px); letter-spacing: -1.4px; }
   .hero-description { font-size: 16px; }
   .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .mission-section { grid-template-columns: 1fr; gap: 24px; padding-block: 60px 68px; }
+  .mission-copy > p { font-size: 20px; }
   .button { width: 100%; justify-content: space-between; }
   .section-heading { display: block; }
   .text-link { display: inline-block; min-height: 44px; margin-top: 16px; padding-block: 10px; }
