@@ -218,6 +218,8 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .guest-card-copy h2 { margin-bottom: 5px; font-size: 25px; line-height: 1.15; }
 .guest-role { min-height: 44px; color: var(--blue) !important; font: 11px/1.55 var(--mono) !important; }
 .guest-org { margin: -4px 0 18px; color: var(--green) !important; font: 500 12px/1.45 var(--mono) !important; letter-spacing: .25px; }
+.guest-affiliation { margin: -9px 0 18px; color: var(--muted) !important; font: 10px/1.5 var(--mono) !important; letter-spacing: .2px; }
+.guest-affiliation strong { color: var(--blue); font-weight: 500; }
 .guest-card.upcoming { border-style: dashed; }
 .guest-card.upcoming .guest-card-copy { position: relative; }
 .coming-badge { display: inline-block; margin-bottom: 13px; border: 1px solid var(--green); padding: 6px 9px; color: var(--green); font: 10px/1 var(--mono); letter-spacing: .5px; }
