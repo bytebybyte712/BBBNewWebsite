@@ -217,6 +217,7 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .guest-card-copy { padding: 24px; }
 .guest-card-copy h2 { margin-bottom: 5px; font-size: 25px; line-height: 1.15; }
 .guest-role { min-height: 44px; color: var(--blue) !important; font: 11px/1.55 var(--mono) !important; }
+.guest-org { margin: -4px 0 18px; color: var(--green) !important; font: 500 12px/1.45 var(--mono) !important; letter-spacing: .25px; }
 .takeaway { margin: 18px 0; border-left: 2px solid var(--green); padding-left: 15px; color: var(--text) !important; }
 .download-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .download-card { display: flex; min-height: 250px; flex-direction: column; justify-content: end; overflow: hidden; border: 1px solid var(--line); background: var(--surface); text-decoration: none; }
