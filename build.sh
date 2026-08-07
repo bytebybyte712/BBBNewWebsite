@@ -10,5 +10,6 @@ rm -f dist/client/assets/Vihaan_Publication.jpg \
   dist/client/assets/vihaan-tsa-awards.jpeg \
   dist/client/assets/vihaan-state-conference-awards.jpeg \
   dist/client/assets/vihaan-technosphere-2024.jpeg \
-  dist/client/assets/vihaan-tsa-speaking.jpeg
+  dist/client/assets/vihaan-tsa-speaking.jpeg \
+  dist/client/assets/byte-by-byte-media-kit.pdf
 cp worker.js dist/server/index.js
